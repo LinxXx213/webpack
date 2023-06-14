@@ -9688,6 +9688,11 @@ declare interface PitchLoaderDefinitionFunction<
 	): string | void | Buffer | Promise<string | Buffer>;
 }
 type Plugin =
+	| undefined
+	| null
+	| false
+	| ""
+	| 0
 	| { apply: (arg0: Resolver) => void }
 	| ((this: Resolver, arg1: Resolver) => void);
 declare interface PnpApiImpl {
